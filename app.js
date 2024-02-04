@@ -1,11 +1,9 @@
 var name1Element = document.getElementById("name1");
 var loveSymbolElement = document.getElementById("loveSymbol");
 var name2Element = document.getElementById("name2");
-var bgMusic = document.getElementById("bgMusic");
-var playButton = document.getElementById("playButton");
+
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-bgMusic.play();
 
 // List of love emojis
 var loveEmojis = ["💞", "❤️", "💖", "😍", "💘", "🌹", "💑", "💏", "💞"];
@@ -15,16 +13,6 @@ function getRandomLoveEmoji() {
 	var randomIndex = Math.floor(Math.random() * loveEmojis.length);
 	return loveEmojis[randomIndex];
 }
-
-// Function to play the background music
-function playBackgroundMusic() {
-	bgMusic.play();
-	// You can optionally hide the play button after it's clicked
-	playButton.style.display = "none";
-}
-
-// Event listener for the play button
-playButton.addEventListener("click", playBackgroundMusic);
 
 loveSymbolElement.innerHTML = getRandomLoveEmoji();
 
